@@ -10,3 +10,31 @@
  *      remover os elementos do array compreendidos entre os índices inicial e final. Em seguida, retorna o
  *      array atualizado.
  */
+//função criada para exibir um resultado.
+function showResult(frase) {
+    document.write(frase);
+    document.write("<br>");
+}
+
+let array = ["Apple", " Samsung", " Motorola", " Xiaomi", " LG"];
+let element = " Lenovo";
+let startingPosition = 1;
+let finalPosition = 3;
+
+function addElement(array, element) {
+    array.push(element)
+    return(array);
+}
+
+function removeLastElement(array, element){
+    array.pop();
+    return(array);
+}
+
+function removeRangeElements(array, element){
+    return array.slice(startingPosition, finalPosition);
+}
+
+showResult(addElement(array, element));
+showResult(removeLastElement(array));
+showResult(removeRangeElements(array, startingPosition, finalPosition));
